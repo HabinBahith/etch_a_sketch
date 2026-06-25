@@ -5,8 +5,9 @@
 }
 
 body {
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     background: linear-gradient(
         135deg,
@@ -17,6 +18,8 @@ body {
 
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 
     padding: 15px;
 
@@ -176,19 +179,27 @@ button.active:hover {
     flex-shrink: 0;
 }
 
-@media (max-height: 750px) {
-    .toolbar {
-        width: 190px;
-        padding: 12px;
-        gap: 8px;
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+        align-items: center;
     }
 
-    button {
-        height: 34px;
-        font-size: 13px;
+    #container {
+        margin: 20px 0;
     }
 
-    input[type="color"] {
-        height: 34px;
+    .title {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
     }
+}
+
+.toolbar {
+    flex: 0 0 210px;
+}
+
+#container {
+    flex: 0 0 auto;
 }
