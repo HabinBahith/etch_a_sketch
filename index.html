@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etch_a_sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="toolbar">
+        <h1 class="title">
+            E<br>
+            T<br>
+            C<br>
+            H<br>
+            <br>
+            A<br>
+            <br>
+            S<br>
+            K<br>
+            E<br>
+            T<br>
+            C<br>
+            H
+        </h1>
+        <div class="color">
+            <label>
+                Pen Color
+                <input type="color" id="penColor" value="#000000">
+            </label>
+
+            <label>
+                Background Color
+                <input type="color" id="backgroundColor" value="#ffffff">
+            </label>
+        </div>
+
+        <div class="pixels">
+            <label for="gridSize">Grid Size</label>
+            <input type="range" id="gridSize" min="4" max="64" value="16">
+            <span>16 × 16</span>
+        </div>
+
+        <button id="colorBtn">Color</button>
+        <button id="rainbowBtn">Rainbow</button>
+        <button id="darkenBtn">Darken</button>
+        <button id="lightenBtn">Lighten</button>
+        <button id="eraserBtn">Eraser</button>
+        <button id="clearBtn">Clear</button>
+    </div>
+
+    <div id="container"></div>
+</body>
+</html>
